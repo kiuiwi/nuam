@@ -1,0 +1,12 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'app/styles.css' %}">
+
+<h1>{{ accion }} Documento</h1>
+
+<form method="post" class="usuario-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn-submit">{{ accion }}</button>
+</form>
+
+<a href="{% url 'lista_documentos' %}" class="btn-back">🔙 Volver</a>

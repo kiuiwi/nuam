@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Usuarios</title>
+    <link rel="stylesheet" href="{% static 'app/styles.css' %}">
+</head>
+<body>
+<h1>Lista de Usuarios</h1>
+<a href="{% url 'crear_usuario' %}" class="btn">➕ Crear usuario</a>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Email</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for u in usuarios %}
+    <tr>
+      <td>{{ u.id_usuario }}</td>
+      <td>{{ u.nombre }}</td>
+      <td>{{ u.apellido }}</td>
+      <td>{{ u.email }}</td>
+      <td>
+        <a href="{% url 'editar_usuario' u.id_usuario %}">Editar</a>
+        <a href="{% url 'eliminar_usuario' u.id_usuario %}">Eliminar</a>
+      </td>
+    </tr>
+    {% empty %}
+    <tr>
+      <td colspan="5" style="text-align:center;">No hay usuarios</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</body>
+</html>

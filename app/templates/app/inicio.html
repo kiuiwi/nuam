@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inicio | NUAM</title>
+  <link rel="stylesheet" href="{% static 'app/styles.css' %}">
+</head>
+<body>
+  <div class="container">
+    <h1>Bienvenido a NUAM</h1>
+    <p>Selecciona una sección:</p>
+
+    <div class="menu">
+      <a href="{% url 'lista_usuarios' %}" class="btn">👥 Gestionar Usuarios</a>
+      <a href="{% url 'lista_documentos' %}" class="btn">📄 Gestionar Documentos</a>
+    </div>
+  </div>
+</body>
+</html>

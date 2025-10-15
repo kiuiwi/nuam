@@ -1,0 +1,13 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'app/styles.css' %}">
+
+
+<h1>Eliminar Usuario</h1>
+<p>¿Estás seguro que quieres eliminar a {{ usuario.nombre }} {{ usuario.apellido }}?</p>
+
+<form method="post" class="usuario-form">
+    {% csrf_token %}
+    <button type="submit" class="btn-delete">Eliminar</button>
+</form>
+
+<a href="{% url 'lista_usuarios' %}" class="btn-back">🔙 Volver</a>
