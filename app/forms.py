@@ -1,17 +1,30 @@
 from django import forms
-from .models import USUARIOS, DOCUMENTOS
+from .models import Usuario, Documento
+
+
 
 class UsuarioForm(forms.ModelForm):
     class Meta:
-        model = USUARIOS
-        fields = '__all__'
+        model = Usuario
+        fields = (
+            'usuario_nombre',
+            'usuario_apellido',
+            'telefono',
+            'email',
+            'direccion',
+            'usuario_tipo',
+            'pais',
+            'region',
+        )
+
 
 
 class DocumentoForm(forms.ModelForm):
-    FECHA_INGRESO = forms.DateField(
-        widget=forms.DateInput(attrs={'type': 'date'})
-    )
-
     class Meta:
-        model = DOCUMENTOS
-        fields = '__all__'
+        model = Documento
+        fields = (
+            'usuario',
+            'documento_nombre',
+            'documento_tipo',
+            'archivo',
+        )

@@ -1,12 +1,10 @@
-{% load static %}
-<link rel="stylesheet" href="{% static 'app/styles.css' %}">
-
-<h1>Eliminar Documento</h1>
-<p>¿Estás seguro que quieres eliminar el documento "{{ documento.NOMBRE_DOCUMENTO }}"?</p>
-
-<form method="post" class="usuario-form">
+{% extends "base.html" %}
+{% block content %}
+<h2>Eliminar Documento</h2>
+<p>¿Seguro que quieres eliminar el documento "{{ documento }}"?</p>
+<form method="post">
     {% csrf_token %}
-    <button type="submit" class="btn-delete">Eliminar</button>
+    <button type="submit">Eliminar</button>
+    <a href="{% url 'lista_documentos' %}">Cancelar</a>
 </form>
-
-<a href="{% url 'lista_documentos' %}" class="btn-back">🔙 Volver</a>
+{% endblock %}

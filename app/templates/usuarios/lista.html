@@ -1,43 +1,36 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Lista de Usuarios</title>
-    <link rel="stylesheet" href="{% static 'app/styles.css' %}">
-</head>
-<body>
-<h1>Lista de Usuarios</h1>
-<a href="{% url 'crear_usuario' %}" class="btn">➕ Crear usuario</a>
-
-<table>
-  <thead>
+{% extends "base.html" %}
+{% block content %}
+<h2>Listado de Usuarios</h2>
+<a href="{% url 'crear_usuario' %}">Crear nuevo usuario</a>
+<table border="1" cellpadding="5">
     <tr>
-      <th>ID</th>
-      <th>Nombre</th>
-      <th>Apellido</th>
-      <th>Email</th>
-      <th>Acciones</th>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Tipo</th>
+        <th>País</th>
+        <th>Región</th>
+        <th>Teléfono</th>
+        <th>Email</th>
+        <th>Dirección</th>
+        <th>Acciones</th>
     </tr>
-  </thead>
-  <tbody>
-    {% for u in usuarios %}
+    {% for usuario in usuarios %}
     <tr>
-      <td>{{ u.id_usuario }}</td>
-      <td>{{ u.nombre }}</td>
-      <td>{{ u.apellido }}</td>
-      <td>{{ u.email }}</td>
-      <td>
-        <a href="{% url 'editar_usuario' u.id_usuario %}">Editar</a>
-        <a href="{% url 'eliminar_usuario' u.id_usuario %}">Eliminar</a>
-      </td>
-    </tr>
-    {% empty %}
-    <tr>
-      <td colspan="5" style="text-align:center;">No hay usuarios</td>
+        <td>{{ usuario.id_usuario }}</td>
+        <td>{{ usuario.usuario_nombre }}</td>
+        <td>{{ usuario.usuario_apellido }}</td>
+        <td>{{ usuario.usuario_tipo }}</td>
+        <td>{{ usuario.pais }}</td>
+        <td>{{ usuario.region }}</td>
+        <td>{{ usuario.telefono }}</td>
+        <td>{{ usuario.email }}</td>
+        <td>{{ usuario.direccion }}</td>
+        <td>
+            <a href="{% url 'editar_usuario' usuario.pk %}">Editar</a> |
+            <a href="{% url 'eliminar_usuario' usuario.pk %}">Eliminar</a>
+        </td>
     </tr>
     {% endfor %}
-  </tbody>
 </table>
-</body>
-</html>
+{% endblock %}

@@ -1,13 +1,10 @@
-{% load static %}
-<link rel="stylesheet" href="{% static 'app/styles.css' %}">
-
-
-<h1>Eliminar Usuario</h1>
-<p>¿Estás seguro que quieres eliminar a {{ usuario.nombre }} {{ usuario.apellido }}?</p>
-
-<form method="post" class="usuario-form">
+{% extends "base.html" %}
+{% block content %}
+<h2>Eliminar Usuario</h2>
+<p>¿Seguro que quieres eliminar al usuario "{{ usuario }}"?</p>
+<form method="post">
     {% csrf_token %}
-    <button type="submit" class="btn-delete">Eliminar</button>
+    <button type="submit">Eliminar</button>
+    <a href="{% url 'lista_usuarios' %}">Cancelar</a>
 </form>
-
-<a href="{% url 'lista_usuarios' %}" class="btn-back">🔙 Volver</a>
+{% endblock %}
