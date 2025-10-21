@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <h2>Listado de Usuarios</h2>
-<a href="{% url 'crear_usuario' %}">Crear nuevo usuario</a>
+<a href="{% url 'crear_usuario' %}">crear nuevo usuario</a>
 <table border="1" cellpadding="5">
     <tr>
         <th>ID</th>
@@ -27,8 +27,8 @@
         <td>{{ usuario.email }}</td>
         <td>{{ usuario.direccion }}</td>
         <td>
-            <a href="{% url 'editar_usuario' usuario.pk %}">Editar</a> |
-            <a href="{% url 'eliminar_usuario' usuario.pk %}">Eliminar</a>
+            <a href="{% url 'editar_usuario' usuario.pk %}">editar</a> |
+            <a href="{% url 'eliminar_usuario' usuario.pk %}">eliminar</a>
         </td>
     </tr>
     {% endfor %}

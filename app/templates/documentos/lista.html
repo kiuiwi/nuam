@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <h2>Listado de Documentos</h2>
-<a href="{% url 'crear_documento' %}">Crear nuevo documento</a>
+<a href="{% url 'crear_documento' %}">crear nuevo documento</a>
 <table border="1" cellpadding="5">
     <tr>
         <th>ID</th>
@@ -20,15 +20,15 @@
         <td>{{ doc.documento_tipo }}</td>
         <td>
             {% if doc.archivo %}
-            <a href="{{ doc.archivo.url }}" target="_blank">Ver archivo</a>
+            <a href="{{ doc.archivo.url }}" target="_blank">ver archivo</a>
             {% else %}
             Sin archivo
             {% endif %}
         </td>
         <td>{{ doc.fecha_ingreso }}</td>
         <td>
-            <a href="{% url 'editar_documento' doc.pk %}">Editar</a> |
-            <a href="{% url 'eliminar_documento' doc.pk %}">Eliminar</a>
+            <a href="{% url 'editar_documento' doc.pk %}">editar</a> |
+            <a href="{% url 'eliminar_documento' doc.pk %}">eliminar</a>
         </td>
     </tr>
     {% endfor %}

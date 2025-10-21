@@ -50,7 +50,7 @@ class UsuarioAdmin(admin.ModelAdmin):
     list_filter = ('usuario_tipo', 'pais', 'region')
     ordering = ('usuario_nombre',)
 
-    # Métodos para mostrar relaciones en el listado
+
     def get_region(self, obj):
         return obj.region.region if obj.region else ''
     get_region.short_description = 'Región'
