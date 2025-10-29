@@ -4,12 +4,12 @@ from .models import Usuario, Documento
 from .forms import UsuarioForm, DocumentoForm
 
 
-# INICIO 
+#INICIO 
 def inicio(request):
-    return render(request, 'inicio.html')
+    return render(request, 'app/inicio.html')
 
 
-# USUARIOS 
+#USUARIOS 
 def lista_usuarios(request):
     usuarios = Usuario.objects.all()
     return render(request, 'usuarios/lista.html', {'usuarios': usuarios})
@@ -43,7 +43,7 @@ def eliminar_usuario(request, pk):
     return render(request, 'usuarios/eliminar.html', {'usuario': usuario})
 
 
-# DOCUMENTOS
+#DOCUMENTOS
 def lista_documentos(request):
     documentos = Documento.objects.all()
     return render(request, 'documentos/lista.html', {'documentos': documentos})
@@ -75,3 +75,4 @@ def eliminar_documento(request, pk):
         documento.delete()
         return redirect('lista_documentos')
     return render(request, 'documentos/eliminar.html', {'documento': documento})
+

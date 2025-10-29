@@ -1,6 +1,3 @@
-/* styles.css */
-
-/* Reset básico */
 body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
@@ -12,7 +9,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Tabla */
+/*tabla */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -28,11 +25,11 @@ th, td {
 }
 
 th {
-    background-color: #4CAF50;
+    background-color: #ff6a00;
     color: white;
 }
 
-/* Formularios */
+/*formularios */
 .usuario-form {
     background-color: #fff;
     padding: 20px;
@@ -51,7 +48,7 @@ th {
     border-radius: 4px;
 }
 
-/* Botones */
+/*botones */
 button {
     padding: 10px 20px;
     border: none;
@@ -79,7 +76,7 @@ button {
     padding: 8px 12px;
     border-radius: 4px;
     transition: 0.2s;
-}
+}g
 
 .btn-back:hover {
     background-color: #ccc;
@@ -94,7 +91,7 @@ button {
 }
 
 .btn {
-  background-color: #007bff;
+  background-color: #ff5100;
   color: white;
   padding: 12px 25px;
   text-decoration: none;
@@ -104,5 +101,20 @@ button {
 }
 
 .btn:hover {
-  background-color: #0056b3;
+  background-color: #c63f00;
+}
+
+
+.container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+
+a {
+  color: #ff5100; 
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
