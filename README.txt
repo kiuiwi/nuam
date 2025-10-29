@@ -41,11 +41,12 @@ venv\Scripts\activate
 
 
 4. Instalar Django
-pip install django==5.1.4
+pip install Django
+
 
 Verificar versión:
 django-admin --version
-
+(debería ser 5.1.4)
 
 
 5. Ejecutar el servidor
