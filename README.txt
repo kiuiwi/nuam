@@ -46,7 +46,7 @@ pip install Django
 
 Verificar versión:
 django-admin --version
-(debería ser 5.1.4)
+(debiese ser igual o superior a la 5.1.4)
 
 
 5. Ejecutar el servidor
