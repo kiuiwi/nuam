@@ -5,19 +5,21 @@
   <meta charset="UTF-8">
   <title>NUAM</title>
   <link rel="stylesheet" href="{% static 'app/styles.css' %}">
+  <link rel="icon" type="image" href="{% static 'app/nuam_HD2.png' %}">
 </head>
 <body>
-    ...
+  <img src="{% static 'app/nuam_HD.png' %}" style="height: 30px;">
 </body>
 </html>
 <body>
+  
   <div class="container">
     <header>
       <h1>NUAM - Sistema de Gestión</h1>
       <nav>
-        <a href="{% url 'inicio' %}">Inicio</a>
-        <a href="{% url 'lista_usuarios' %}">Usuarios</a>
-        <a href="{% url 'lista_documentos' %}">Documentos</a>
+        <a class="btn" href="{% url 'inicio' %}">Inicio</a>
+        <a class="btn" href="{% url 'lista_usuarios' %}">Usuarios</a>
+        <a class="btn" href="{% url 'lista_documentos' %}">Documentos</a>
       </nav>
     </header>
     <main>

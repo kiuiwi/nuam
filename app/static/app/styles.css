@@ -5,7 +5,7 @@ body {
 }
 
 h1 {
-    color: #333;
+    color:rgb(255,66,1);
     margin-bottom: 20px;
 }
 
@@ -25,7 +25,7 @@ th, td {
 }
 
 th {
-    background-color: #ff6a00;
+    background-color: rgb(255,66,1);
     color: white;
 }
 
@@ -63,7 +63,7 @@ button {
 }
 
 .btn-delete {
-    background-color: #f44336;
+    background-color: rgb(255,66,1);
     color: white;
 }
 
@@ -91,13 +91,14 @@ button {
 }
 
 .btn {
-  background-color: #ff5100;
+  background-color: rgb(255,66,1);
   color: white;
   padding: 12px 25px;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
   transition: 0.3s;
+  font-family: sans-serif;
 }
 
 .btn:hover {
@@ -108,11 +109,27 @@ button {
 .container {
   text-align: center;
   margin-top: 100px;
+  background-color: white;
+  padding: 20px;
+  border: 1px;
+  border-radius: 8px;
+  box-shadow: 0 4px 35px black;
 }
 
+.titulo{
+  color: rgb(255,66,1);
+}
+
+.Form{
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgb(97, 97, 97);
+}
 
 a {
-  color: #ff5100; 
+  color: rgb(255,66,1); 
   text-decoration: none;
 }
 a:hover {

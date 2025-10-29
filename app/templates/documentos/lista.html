@@ -1,36 +1,41 @@
 {% extends "base.html" %}
 {% block content %}
 <h2>Listado de Documentos</h2>
-<a href="{% url 'crear_documento' %}">crear nuevo documento</a>
-<table border="1" cellpadding="5">
-    <tr>
-        <th>ID</th>
-        <th>Nombre</th>
-        <th>Usuario</th>
-        <th>Tipo</th>
-        <th>Archivo</th>
-        <th>Fecha Ingreso</th>
-        <th>Acciones</th>
-    </tr>
-    {% for doc in documentos %}
-    <tr>
-        <td>{{ doc.id_documento }}</td>
-        <td>{{ doc.documento_nombre }}</td>
-        <td>{{ doc.usuario }}</td>
-        <td>{{ doc.documento_tipo }}</td>
-        <td>
-            {% if doc.archivo %}
-            <a href="{{ doc.archivo.url }}" target="_blank">ver archivo</a>
-            {% else %}
-            Sin archivo
-            {% endif %}
-        </td>
-        <td>{{ doc.fecha_ingreso }}</td>
-        <td>
-            <a href="{% url 'editar_documento' doc.pk %}">editar</a> |
-            <a href="{% url 'eliminar_documento' doc.pk %}">eliminar</a>
-        </td>
-    </tr>
-    {% endfor %}
-</table>
-{% endblock %}
+
+<div class="Form">
+    <a href="{% url 'crear_documento' %}">crear nuevo documento</a>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Usuario</th>
+            <th>Tipo</th>
+            <th>Archivo</th>
+            <th>Fecha Ingreso</th>
+            <th>Acciones</th>
+        </tr>
+        {% for doc in documentos %}
+        <tr>
+            <td>{{ doc.id_documento }}</td>
+            <td>{{ doc.documento_nombre }}</td>
+            <td>{{ doc.usuario }}</td>
+            <td>{{ doc.documento_tipo }}</td>
+            <td>
+                {% if doc.archivo %}
+                <a href="{{ doc.archivo.url }}" target="_blank">ver archivo</a>
+                {% else %}
+                Sin archivo
+                {% endif %}
+            </td>
+            <td>{{ doc.fecha_ingreso }}</td>
+            <td>
+                <a href="{% url 'editar_documento' doc.pk %}">editar</a> |
+                <a href="{% url 'eliminar_documento' doc.pk %}">eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endblock %}
+
+
+</div>
