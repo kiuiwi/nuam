@@ -51,7 +51,7 @@ contraseña: inacap123
 
 
 
-💡 Notas finales
+💡 Notas
 El proyecto incluye un CRUD completo para usuarios y documentos.
 El archivo .gitignore excluye venv/, __pycache__/, db.sqlite3 y otros archivos innecesarios.
 
