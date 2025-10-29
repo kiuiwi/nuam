@@ -19,7 +19,8 @@ Virtualenv (opcional pero recomendado)
 
 
  2. Clonar el repositorio
-Abre una terminal y ejecuta:
+Crea una carpeta donde guardarás el proyecto
+Abre una terminal y accede a la carpeta creada, luego ejecuta:
 git clone https://github.com/kiuiwi/nuam
 cd nuam
 
